@@ -1,0 +1,137 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+header {
+  @include flexCenter();
+  text-transform: uppercase;
+  color: #EDBA5D;
+}
+body {
+  background: #1B2B34;
+
+  #container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(100px, auto) repeat(5,80px);
+    grid-template-areas:
+    "screen screen screen screen"
+    "clear divide multiply minus"
+    "seven eight nine plus"
+    "four five six plus"
+    "one two three equal"
+    "zero decimal delete equal";
+    grid-gap: 0.25em;
+    list-style: none;
+    
+    #screen {
+      background: #CB942A !important;
+      color: black;
+      font-weight: bolder;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      flex-direction: column;
+      word-break: break-all;
+      padding: 10px 5px;
+
+      #expression {
+        font-size: 2em;
+      }
+      #result {
+        font-size: 2.5em;
+      }
+    }
+
+    .number, .equal, .operator, .delete, .clear {
+      @include flexCenter();
+      font-size: 1.5em;
+      background: #EDBA5D !important;
+    }
+  }
+}
+
+// Grid Area Naming
+
+#screen {
+  grid-area: screen;
+}
+.plus {
+  grid-area: plus;
+}
+.minus {
+  grid-area: minus;
+}
+.multiply {
+  grid-area: multiply;
+}
+.divide {
+  grid-area: divide;
+}
+.equal {
+  grid-area: equal;
+}
+.nine {
+  grid-area: nine;
+}
+.eight {
+  grid-area: eight;
+}
+.seven {
+  grid-area: seven;
+}
+.six {
+  grid-area: six;
+}
+.five {
+  grid-area: five;
+}
+.four {
+  grid-area: four;
+}
+.three {
+  grid-area: three;
+}
+.two {
+  grid-area: two;
+}
+.one {
+  grid-area: one;
+}
+.zero {
+  grid-area: zero;
+}
+.decimal {
+  grid-area: decimal;
+}
+.delete {
+  grid-area: delete;
+}
+.clear {
+  grid-area: clear;
+}
+// Media Query for Desktops, Tablets
+@media (min-width: 600px) {
+  
+  #container {
+    margin: auto;
+    display:grid;
+    width: 70%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(100px, auto) repeat(5,80px);
+    grid-template-areas:
+    "screen screen screen screen"
+    "clear divide multiply minus"
+    "seven eight nine plus"
+    "four five six plus"
+    "one two three equal"
+    "zero decimal delete equal";
+    grid-gap: 0.25em;
+  }
+}

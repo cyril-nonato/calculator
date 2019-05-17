@@ -1,0 +1,211 @@
+* {
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  color: #EDBA5D;
+}
+
+body {
+  background: #1B2B34;
+}
+
+body #container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: minmax(100px, auto) (80px)[5];
+      grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+      grid-template-areas: "screen screen screen screen" "clear divide multiply minus" "seven eight nine plus" "four five six plus" "one two three equal" "zero decimal delete equal";
+  grid-gap: 0.25em;
+  list-style: none;
+}
+
+body #container #screen {
+  background: #CB942A !important;
+  color: black;
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  word-break: break-all;
+  padding: 10px 5px;
+}
+
+body #container #screen #expression {
+  font-size: 2em;
+}
+
+body #container #screen #result {
+  font-size: 2.5em;
+}
+
+body #container .number, body #container .equal, body #container .operator, body #container .delete, body #container .clear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5em;
+  background: #EDBA5D !important;
+}
+
+#screen {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: screen;
+}
+
+.plus {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: plus;
+}
+
+.minus {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: minus;
+}
+
+.multiply {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: multiply;
+}
+
+.divide {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: divide;
+}
+
+.equal {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: equal;
+}
+
+.nine {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.eight {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.seven {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+.six {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+.five {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.four {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+.three {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+.two {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+.one {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.zero {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: zero;
+}
+
+.decimal {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: decimal;
+}
+
+.delete {
+  -ms-grid-row: 6;
+  -ms-grid-column: 3;
+  grid-area: delete;
+}
+
+.clear {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: clear;
+}
+
+@media (min-width: 600px) {
+  #container {
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    width: 70%;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: minmax(100px, auto) (80px)[5];
+        grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+        grid-template-areas: "screen screen screen screen" "clear divide multiply minus" "seven eight nine plus" "four five six plus" "one two three equal" "zero decimal delete equal";
+    grid-gap: 0.25em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
